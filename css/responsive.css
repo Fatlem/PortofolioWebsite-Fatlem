@@ -1,0 +1,475 @@
+/* === TABLET STYLES === */
+@media (max-width: 1024px) {
+    .about-content {
+        gap: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+    
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    }
+    
+    section {
+        padding: 80px 0;
+    }
+}
+
+/* === MOBILE STYLES === */
+@media (max-width: 768px) {
+    /* Navigation Mobile */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 15, 15, 0.98);
+        flex-direction: column;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    
+    .mobile-menu {
+        display: flex;
+    }
+    
+    /* Mobile Menu Animation */
+    .mobile-menu.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Hero Section Mobile */
+    .hero {
+        padding: 2rem 1rem;
+        min-height: 100vh;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+        max-width: 90%;
+    }
+    
+    /* CTA Buttons Mobile */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+    
+    /* About Section Mobile */
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .about-image img {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .about-text {
+        text-align: left;
+    }
+    
+    /* Skills Mobile */
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.8rem;
+    }
+    
+    .skill-item {
+        padding: 0.8rem;
+    }
+    
+    .skill-item i {
+        font-size: 1.5rem;
+    }
+    
+    .skill-item p {
+        font-size: 0.9rem;
+    }
+    
+    /* Projects Mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        max-width: 100%;
+    }
+    
+    .project-image {
+        height: 180px;
+    }
+    
+    /* Contact Mobile */
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        padding: 1.5rem;
+    }
+    
+    /* Social Links Mobile */
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    /* Section Padding Mobile */
+    section {
+        padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Navigation Active States */
+    .nav-links a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+        background: rgba(0, 212, 255, 0.1);
+        border-radius: 5px;
+    }
+}
+
+/* === SMALL MOBILE STYLES === */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        padding: 1rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.5rem, 8vw, 2rem);
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+    
+    .about-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .project-info {
+        padding: 1rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-info p {
+        font-size: 0.9rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+    }
+    
+    .contact-item i {
+        font-size: 1.5rem;
+    }
+    
+    .contact-item h4 {
+        font-size: 1rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+    
+    /* Skills smaller spacing */
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+    
+    /* Project image smaller */
+    .project-image {
+        height: 160px;
+    }
+}
+
+/* === LARGE SCREEN STYLES === */
+@media (min-width: 1400px) {
+    .nav-container,
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    
+    .about-content {
+        gap: 5rem;
+    }
+    
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+/* === ULTRA WIDE SCREEN STYLES === */
+@media (min-width: 1900px) {
+    .nav-container,
+    .container {
+        max-width: 1800px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 800px;
+        margin: 0 auto 3rem;
+    }
+    
+    .skills {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* === LANDSCAPE MOBILE === */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 1rem;
+    }
+    
+    .hero-content {
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    
+    .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn {
+        max-width: 200px;
+    }
+}
+
+/* === PRINT STYLES === */
+@media print {
+    .loading,
+    nav,
+    .mobile-menu,
+    .project-overlay,
+    .btn,
+    .social-links,
+    .back-to-top,
+    .scroll-progress {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+    
+    .hero {
+        background: white !important;
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .hero-title,
+    .section-title,
+    .about-text h3,
+    .project-info h3,
+    .contact-item h4 {
+        color: black !important;
+    }
+    
+    .hero-description,
+    .about-text,
+    .project-info p,
+    .contact-item p {
+        color: #333 !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        background: white !important;
+        padding: 1rem 0;
+    }
+    
+    .project-card,
+    .contact-item,
+    .skill-item {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === HIGH CONTRAST MODE === */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        background: #0066cc;
+        border: 2px solid #ffffff;
+    }
+    
+    .btn-secondary {
+        border: 3px solid #00d4ff;
+    }
+    
+    .nav-links a:hover,
+    .logo:hover {
+        text-decoration: underline;
+    }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .floating {
+        animation: none !important;
+    }
+    
+    .loading-spinner {
+        animation: none !important;
+    }
+}
+
+/* === DARK MODE SUPPORT === */
+@media (prefers-color-scheme: light) {
+    /* Optional: Add light mode styles if needed */
+    /* Currently website is designed for dark theme */
+}
