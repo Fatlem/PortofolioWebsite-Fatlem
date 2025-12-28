@@ -591,3 +591,300 @@ footer p {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* ======================================
+   CERTIFICATE MODAL STYLES
+   ====================================== */
+
+.certificate-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: fadeInModal 0.3s ease;
+}
+
+@keyframes fadeInModal {
+    from { 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+    animation: zoomInModal 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes zoomInModal {
+    from { 
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    backdrop-filter: blur(10px);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    padding: 25px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 204, 0.1));
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Certificate image cursor and hover effect */
+#certificate .project-image {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* View Details Button Overlay */
+#certificate .project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 212, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+#certificate .project-image::after {
+    content: '🔍 View Details';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #00d4ff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#certificate .project-card:hover .project-image::before {
+    opacity: 1;
+}
+
+#certificate .project-card:hover .project-image::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#certificate .project-image img {
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#certificate .project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+/* Loading animation for modal image */
+.modal-content.loading {
+    opacity: 0.5;
+}
+
+/* Keyboard navigation hint */
+.modal-caption::after {
+    content: 'Press ESC to close';
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* === RESPONSIVE STYLES FOR MODAL === */
+@media (max-width: 1024px) {
+    .modal-content {
+        max-width: 92%;
+        max-height: 80vh;
+    }
+    
+    .modal-caption {
+        width: 85%;
+        font-size: 1.1rem;
+        padding: 20px 15px;
+    }
+    
+    .modal-close {
+        top: 15px;
+        right: 30px;
+        font-size: 40px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificate-modal {
+        padding-top: 30px;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 35px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .modal-caption {
+        width: 90%;
+        font-size: 1rem;
+        padding: 15px 10px;
+    }
+    
+    #certificate .project-image::after {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-modal {
+        padding-top: 20px;
+    }
+    
+    .modal-content {
+        max-width: 98%;
+        max-height: 70vh;
+    }
+    
+    .modal-close {
+        top: 5px;
+        right: 10px;
+        font-size: 30px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .modal-caption {
+        width: 95%;
+        font-size: 0.9rem;
+        padding: 12px 8px;
+        margin-top: 15px;
+    }
+    
+    .modal-caption::after {
+        font-size: 0.75rem;
+        margin-top: 8px;
+    }
+    
+    #certificate .project-image::after {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+}
+
+/* === LANDSCAPE MODE === */
+@media (max-width: 768px) and (orientation: landscape) {
+    .certificate-modal {
+        padding-top: 10px;
+    }
+    
+    .modal-content {
+        max-height: 85vh;
+    }
+    
+    .modal-caption {
+        padding: 10px;
+        font-size: 0.85rem;
+        margin-top: 10px;
+    }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    .certificate-modal,
+    .modal-content,
+    .modal-close,
+    #certificate .project-image img {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* === HIGH CONTRAST MODE === */
+@media (prefers-contrast: high) {
+    .modal-close {
+        background: rgba(255, 255, 255, 0.3);
+        border: 2px solid #fff;
+    }
+    
+    .modal-caption {
+        border: 2px solid #00d4ff;
+    }
+}
