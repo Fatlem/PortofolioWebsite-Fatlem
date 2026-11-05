@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["icon.svg"],
+      includeAssets: ["logo.png"],
       manifest: {
         name: "Faathir El Tasleem",
         short_name: "Fatlem",
@@ -16,7 +16,7 @@ export default defineConfig({
         display: "standalone",
         background_color: "#F5F4EF",
         theme_color: "#F5F4EF",
-        icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any maskable" }],
+        icons: [{ src: "/logo.png", sizes: "any", type: "image/svg+xml", purpose: "any maskable" }],
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,jpg,png}"],
